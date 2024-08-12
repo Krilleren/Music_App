@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP4 Afspiller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Video Player -->
+        <div class="video-section">
+            <video id="audioPlayer" class="video-player" controls>
+                <source id="audioSource" src="" type="video/mp4">
+                Din browser understøtter ikke video elementet.
+            </video>
+            <div class="controls">
+                <button id="playPauseButton" class="control-button"><i class="fas fa-play"></i></button>
+                <button id="prevButton" class="control-button"><i class="fas fa-backward"></i></button>
+                <button id="nextButton" class="control-button"><i class="fas fa-forward"></i></button>
+                <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" class="volume-slider">
+            </div>
+        </div>
+
+        <!-- Sidebar for Playlist and Search -->
+        <div class="sidebar">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Søg...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="playlist" id="playlist">
+                <!-- Songs will be added dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
